@@ -1,0 +1,13 @@
+
+
+<a href="test">link</a>
+<a href="{% url 'test' %}">Blog</a>
+<script>
+fetch('api')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(myJson);
+  });
+</script>

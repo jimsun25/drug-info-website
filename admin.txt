@@ -1,0 +1,44 @@
+admin
+123456
+pip install djangorestframework
+pip install Django
+py manage.py runserver
+data={'title':'testtestgddddgg','link':'http://google.com/org'}
+r=requests.post('http://localhost:8000/news/api/',data=data) 
+r=requests.put('http://localhost:8000/news/api/24',data=data) 
+r=requests.delete('http://localhost:8000/news/api/24',data=data)
+
+
+系統管理員開啟
+.\httpd.exe -k install -n “Finalproject”安裝服務
+.\httpd.exe -k start -n "Finalproject"
+add to setting.py
+ 'mod_wsgi.server',
+mod_wsgi-express module-config
+
+LoadFile "C:/Users/micha/AppData/Local/Programs/Python/Python310/python310.dll"
+LoadModule wsgi_module "C:/Users/micha/AppData/Local/Programs/Python/Python310/lib/site-packages/mod_wsgi/server/mod_wsgi.cp310-win_amd64.pyd"
+WSGIPythonHome "C:/Users/micha/AppData/Local/Programs/Python/Python310"
+WSGIScriptAlias / E:/_finalproject/finalproject/finalproject/wsgi.py
+WSGIPythonHome "C:/Users/micha/AppData/Local/Programs/Python/Python310"
+WSGIPythonPath "E:/_finalproject/finalproject"
+
+
+<Directory E:/_finalproject/finalproject/finalproject/>
+<Files wsgi.py>
+Require all granted
+</Files>
+</Directory>
+
+setting.py 
+import os
+ALLOWED_HOSTS = ['IP','localhost','127.0.0.1']
+    'mod_wsgi.server',
+    'rest_framework',
+    'Drug.apps.DrugConfig'
+TIME_ZONE = 'Asia/Taipei'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+PYTHONHOME C:/Users/micha/AppData/Local/Programs/Python/Python310
+PYTHONPATH C:/Users/micha/AppData/Local/Programs/Python/Python310/Lib
